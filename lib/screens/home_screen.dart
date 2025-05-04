@@ -1,5 +1,9 @@
+import 'package:fluentui_icons/fluentui_icons.dart' show FluentSystemIcons;
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
+import 'package:ticket_app/base/res/styles/media.dart';
+import 'package:ticket_app/base/widgets/app_double_text.dart'
+    show AppDoubleText;
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -7,8 +11,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppStyles.bgColor,
       body: ListView(
         children: [
+          const SizedBox(height: 40),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -18,6 +24,7 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Good morning", style: AppStyles.headLineStyle3),
                         const SizedBox(height: 5),
@@ -30,15 +37,37 @@ class HomeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         image: const DecorationImage(
-                          image: AssetImage("assets/images/logo.png"),
+                          image: AssetImage(AppMedia.logo),
                         ),
                       ),
                     ),
                   ],
                 ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [Text("Search icon"), Text("Empty space")],
+                const SizedBox(height: 25),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 20,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                  ),
+                  child: const Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        FluentSystemIcons.ic_fluent_search_regular,
+                        color: Color.fromARGB(255, 107, 107, 107),
+                      ),
+                      Text("Search"),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 40),
+                const AppDoubleText(
+                  bigText: 'Upcoming Flights',
+                  smallText: 'View all',
                 ),
               ],
             ),
