@@ -87,7 +87,6 @@ class HomeScreen extends StatelessWidget {
                               (singleTicket) => GestureDetector(
                                 onTap: () {
                                   var index = ticketList.indexOf(singleTicket);
-                                  print("I have tapped on ticket $index");
 
                                   Navigator.pushNamed(
                                     context,

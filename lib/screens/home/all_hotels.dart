@@ -10,15 +10,15 @@ class AllHotels extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppStyles.bgColor,
       appBar: AppBar(
-        title: Text("All Hotels"),
+        title: const Text("All Hotels"),
         backgroundColor: AppStyles.bgColor,
       ),
       body: Container(
-        margin: EdgeInsets.only(left: 8),
+        margin: const EdgeInsets.only(left: 8),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 16.0,
               mainAxisSpacing: 16.0,
@@ -47,7 +47,6 @@ class HotelGridView extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        print("my index is $index");
         Navigator.pushNamed(
           context,
           AppRoutes.hotelDetail,
@@ -55,10 +54,10 @@ class HotelGridView extends StatelessWidget {
         );
       },
       child: Container(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         width: size.width * 0.6,
         height: 350,
-        margin: EdgeInsets.only(right: 10),
+        margin: const EdgeInsets.only(right: 10),
         decoration: BoxDecoration(
           color: AppStyles.primaryColor,
           borderRadius: BorderRadius.circular(18),

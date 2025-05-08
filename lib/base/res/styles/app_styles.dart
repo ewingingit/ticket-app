@@ -4,20 +4,21 @@ Color primary = const Color(0xFF687daf);
 
 class AppStyles {
   static Color primaryColor = primary;
-  static Color bgColor = const Color(0xFFeeedf2);
   static Color textColor = const Color(0xFF3b3b3b);
-  static Color ticketBlue = const Color(0xFF526799);
+  static Color bgColor = const Color(0xFFeeedf2);
   static Color ticketOrange = const Color(0xFFF37B67);
+  static Color ticketBlue = const Color(0xFF526799);
   static Color kakiColor = const Color(0xFFd2bdb6);
   static Color planeColor = const Color(0xFFBFC2DF);
-  static Color findTicketColor = const Color(0xD91130CE);
+  static Color findTicketColor = const Color(0XD91130CE);
   static Color circleColor = const Color(0xFF189999);
   static Color ticketColor = const Color(0xFFFFFFFF);
   static Color dotColor = const Color(0xFF8ACCF7);
-  static Color secondplaneColor = const Color(0xFF8ACCF7);
+  static Color secondplaneColor = const Color(0xFFBACCF7);
+  static Color profileLocationColor = const Color(0xFFFEF4F3);
 
   static TextStyle textStyle = TextStyle(
-    fontSize: 17,
+    fontSize: 16,
     color: textColor,
     fontWeight: FontWeight.w500,
   );
